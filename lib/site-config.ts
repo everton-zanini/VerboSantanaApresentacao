@@ -19,6 +19,7 @@ import {
   CalendarDays,
   Globe2,
   Music4,
+  Handshake,
 } from "lucide-react";
 import { InstagramIcon, YoutubeIcon } from "@/components/icons/social-icons";
 import type {
@@ -78,6 +79,7 @@ export const ministryItems: MinistryItem[] = [
   { slug: "comunicacao", name: "Comunicação", icon: Megaphone },
   { slug: "conexoes", name: "Conexões", icon: Link2 },
   { slug: "diaconato", name: "Diaconato", icon: HandHelping },
+  { slug: "evangelismo", name: "Evangelismo", icon: Handshake },
   { slug: "eventos", name: "Eventos", icon: CalendarDays },
   { slug: "homens", name: "Homens", icon: Users },
   { slug: "infantil", name: "Infantil", icon: Baby },
