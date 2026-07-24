@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { MapPin, MessageCircle, Phone } from "lucide-react";
 import { siteConfig, socialLinks } from "@/lib/site-config";
 
 export function Footer() {
@@ -9,9 +9,7 @@ export function Footer() {
           <div>
             <p className="font-heading text-xl font-bold">{siteConfig.shortName}</p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-background/70">
-              &ldquo;{siteConfig.verse.text}&rdquo;
-              <br />
-              <span className="text-background/50">{siteConfig.verse.reference}</span>
+              {siteConfig.tagline}
             </p>
           </div>
 
@@ -29,8 +27,15 @@ export function Footer() {
                 <span>{siteConfig.contact.phoneDisplay}</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 shrink-0" />
-                <span>{siteConfig.contact.email}</span>
+                <MessageCircle className="h-4 w-4 shrink-0" />
+                <a
+                  href={`https://wa.me/${siteConfig.contact.whatsappNumber}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-background"
+                >
+                  Fale conosco no WhatsApp
+                </a>
               </li>
             </ul>
           </div>

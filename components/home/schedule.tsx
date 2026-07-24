@@ -1,11 +1,7 @@
-"use client";
-
-import { CalendarPlus, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Clock } from "lucide-react";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal } from "@/components/shared/reveal";
 import { scheduleItems } from "@/lib/site-config";
-import { downloadScheduleICS } from "@/lib/calendar";
 
 export function Schedule() {
   return (
@@ -26,18 +22,6 @@ export function Schedule() {
                   <p className="text-sm text-background/70">{item.label}</p>
                 </div>
               ))}
-            </div>
-
-            <div className="flex justify-center border-t border-background/10 px-8 py-6">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="h-12 rounded-full px-6 text-sm font-semibold"
-                onClick={() => downloadScheduleICS(scheduleItems)}
-              >
-                <CalendarPlus className="h-5 w-5" />
-                Adicionar à agenda
-              </Button>
             </div>
           </div>
         </Reveal>

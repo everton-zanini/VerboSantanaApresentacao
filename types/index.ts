@@ -9,21 +9,14 @@ export interface ScheduleItem {
   label: string;
 }
 
-export interface VisionItem {
+export interface ValueItem {
   icon: LucideIcon;
   title: string;
-  description: string;
-}
-
-export interface HighlightItem {
-  icon: LucideIcon;
-  label: string;
 }
 
 export interface MinistryItem {
   slug: string;
   name: string;
-  description: string;
   icon: LucideIcon;
 }
 

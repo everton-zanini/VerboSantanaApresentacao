@@ -21,7 +21,6 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
   title: {
     default: `${siteConfig.name} | Seja bem-vindo`,
     template: `%s | ${siteConfig.shortName}`,
@@ -37,7 +36,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${siteConfig.name} | Seja bem-vindo`,
     description: siteConfig.description,
-    url: siteConfig.url,
     siteName: siteConfig.shortName,
     locale: "pt_BR",
     type: "website",
@@ -58,7 +56,6 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Church",
   name: siteConfig.name,
-  url: siteConfig.url,
   address: {
     "@type": "PostalAddress",
     streetAddress: siteConfig.address.street,
@@ -68,7 +65,6 @@ const jsonLd = {
     addressCountry: "BR",
   },
   telephone: siteConfig.contact.phoneDisplay,
-  email: siteConfig.contact.email,
 };
 
 export default function RootLayout({

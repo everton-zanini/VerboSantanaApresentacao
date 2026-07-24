@@ -1,21 +1,29 @@
 import {
   Baby,
-  Heart,
   BookOpen,
-  Globe2,
   Users,
   Sparkles,
-  Music4,
-  PersonStanding,
   UsersRound,
   HeartHandshake,
   MessageCircle,
+  Flame,
+  ShieldCheck,
+  Smile,
+  HandHeart,
+  Building2,
+  DoorOpen,
+  HandCoins,
+  Megaphone,
+  Link2,
+  HandHelping,
+  CalendarDays,
+  Globe2,
+  Music4,
 } from "lucide-react";
-import { InstagramIcon, FacebookIcon, YoutubeIcon } from "@/components/icons/social-icons";
+import { InstagramIcon, YoutubeIcon } from "@/components/icons/social-icons";
 import type {
   ScheduleItem,
-  VisionItem,
-  HighlightItem,
+  ValueItem,
   MinistryItem,
   SocialLink,
 } from "@/types";
@@ -27,22 +35,16 @@ export const siteConfig = {
   tagline: "Seja muito bem-vindo!",
   description:
     "Uma igreja acolhedora e moderna, baseada na Palavra de Deus. Conheça nossos horários, ministérios e venha nos visitar.",
-  url: "https://verbodavidasantana.com.br",
-  verse: {
-    text: "Porque para mim o viver é Cristo, e o morrer é lucro.",
-    reference: "Filipenses 1:21",
-  },
   contact: {
-    whatsappNumber: "5511999999999",
-    email: "contato@verbodavidasantana.com.br",
-    phoneDisplay: "(11) 99999-9999",
+    whatsappNumber: "5511988897593",
+    phoneDisplay: "(11) 98889-7593",
   },
   address: {
-    street: "Rua Exemplo, 123 - Santana",
+    street: "Rua Dr Zuquim, 1228 - Santana",
     cityState: "São Paulo - SP",
-    zip: "02000-000",
-    full: "Rua Exemplo, 123 - Santana, São Paulo - SP, 02000-000",
-    mapsQuery: "Igreja Verbo da Vida Santana, São Paulo",
+    zip: "02035-021",
+    full: "Rua Dr Zuquim, 1228 - Santana, São Paulo - SP, 02035-021",
+    mapsQuery: "Rua Dr Zuquim, 1228 - Santana, São Paulo - SP, 02035-021",
   },
 };
 
@@ -51,77 +53,47 @@ export const scheduleItems: ScheduleItem[] = [
   { day: "Terça-feira", time: "20:00", label: "Culto de Oração" },
 ];
 
-export const visionItems: VisionItem[] = [
-  {
-    icon: Heart,
-    title: "Amar Pessoas",
-    description: "Acolher cada pessoa com o amor de Cristo, sem julgamentos.",
-  },
-  {
-    icon: BookOpen,
-    title: "Ensinar a Palavra",
-    description: "Uma Palavra prática e relevante para o dia a dia.",
-  },
-  {
-    icon: Globe2,
-    title: "Alcançar Vidas",
-    description: "Levar esperança e transformação para além dos nossos muros.",
-  },
-  {
-    icon: Users,
-    title: "Formar Discípulos",
-    description: "Ajudar cada um a crescer em fé, caráter e propósito.",
-  },
-];
+export const mission = {
+  statement: "Levar a Palavra da Fé para libertar o Meu povo.",
+};
 
-export const highlightItems: HighlightItem[] = [
-  { icon: Sparkles, label: "Ambiente acolhedor" },
-  { icon: BookOpen, label: "Palavra prática" },
-  { icon: Music4, label: "Louvor inspirador" },
-  { icon: Baby, label: "Ministério infantil" },
-  { icon: PersonStanding, label: "Jovens" },
-  { icon: HeartHandshake, label: "Casais" },
-  { icon: UsersRound, label: "Mulheres" },
-  { icon: Users, label: "Homens" },
+export const vision = {
+  statement: "Alcançar o Brasil e as nações com a Palavra da fé e o amor.",
+};
+
+export const valueItems: ValueItem[] = [
+  { icon: Flame, title: "Vida de fé" },
+  { icon: HeartHandshake, title: "Unidade e Amor" },
+  { icon: ShieldCheck, title: "Integridade" },
+  { icon: Smile, title: "Alegria e Paz" },
+  { icon: BookOpen, title: "Firmeza doutrinária" },
+  { icon: Sparkles, title: "Fervor de espírito" },
+  { icon: HandHeart, title: "Coração para servir" },
+  { icon: Building2, title: "Edificação de pessoas" },
 ];
 
 export const ministryItems: MinistryItem[] = [
-  {
-    slug: "braves",
-    name: "Braves",
-    description: "Ministério de jovens: comunidade, propósito e adrenalina de fé.",
-    icon: Sparkles,
-  },
-  {
-    slug: "di",
-    name: "DI - Discipulado Infantil",
-    description: "Um espaço divertido e seguro para as crianças conhecerem Jesus.",
-    icon: Baby,
-  },
-  {
-    slug: "mulheres",
-    name: "Mulheres",
-    description: "Encontros para fortalecer a fé e a amizade entre mulheres.",
-    icon: UsersRound,
-  },
-  {
-    slug: "homens",
-    name: "Homens",
-    description: "Comunidade para crescer em caráter, fé e liderança.",
-    icon: Users,
-  },
-  {
-    slug: "casais",
-    name: "Casais",
-    description: "Cuidando e fortalecendo famílias através da Palavra.",
-    icon: HeartHandshake,
-  },
+  { slug: "acolhimento", name: "Acolhimento", icon: DoorOpen },
+  { slug: "assistencia-social", name: "Assistência Social", icon: HandCoins },
+  { slug: "comunicacao", name: "Comunicação", icon: Megaphone },
+  { slug: "conexoes", name: "Conexões", icon: Link2 },
+  { slug: "diaconato", name: "Diaconato", icon: HandHelping },
+  { slug: "eventos", name: "Eventos", icon: CalendarDays },
+  { slug: "homens", name: "Homens", icon: Users },
+  { slug: "infantil", name: "Infantil", icon: Baby },
+  { slug: "jovens", name: "Jovens", icon: Sparkles },
+  { slug: "missoes", name: "Missões", icon: Globe2 },
+  { slug: "mulheres", name: "Mulheres", icon: UsersRound },
+  { slug: "musica", name: "Música", icon: Music4 },
 ];
 
 export const socialLinks: SocialLink[] = [
-  { name: "Instagram", href: "https://instagram.com/verbodavidasantana", icon: InstagramIcon },
-  { name: "Facebook", href: "https://facebook.com/verbodavidasantana", icon: FacebookIcon },
-  { name: "YouTube", href: "https://youtube.com/@verbodavidasantana", icon: YoutubeIcon },
+  { name: "Instagram", href: "https://www.instagram.com/verbosantana/", icon: InstagramIcon },
+  {
+    name: "YouTube",
+    href: "https://www.youtube.com/@Igrejaverbodavidasantana",
+    icon: YoutubeIcon,
+  },
   {
     name: "WhatsApp",
     href: `https://wa.me/${siteConfig.contact.whatsappNumber}`,
