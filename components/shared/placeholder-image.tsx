@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ImageIcon, type LucideIcon } from "lucide-react";
+import { withBasePath } from "@/lib/base-path";
 import { cn } from "@/lib/utils";
 
 interface PlaceholderImageProps {
@@ -27,7 +28,7 @@ export function PlaceholderImage({
   if (src) {
     return (
       <Image
-        src={src}
+        src={withBasePath(src)}
         alt={alt}
         fill
         priority={priority}

@@ -3,9 +3,8 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { withBasePath } from "@/lib/base-path";
 import { siteConfig } from "@/lib/site-config";
-
-const HERO_YOUTUBE_ID = "ajp0Faf6Jk4";
 
 const container = {
   hidden: {},
@@ -24,13 +23,17 @@ export function Hero() {
       className="relative flex min-h-[100svh] items-center justify-center overflow-hidden"
     >
       <div className="absolute inset-0 bg-black">
-        <iframe
-          className="pointer-events-none absolute top-1/2 left-1/2 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2"
-          src={`https://www.youtube-nocookie.com/embed/${HERO_YOUTUBE_ID}?autoplay=1&mute=1&loop=1&playlist=${HERO_YOUTUBE_ID}&controls=0&showinfo=0&modestbranding=1&playsinline=1&rel=0&iv_load_policy=3`}
-          title="Vídeo da Igreja Verbo da Vida Santana"
-          allow="autoplay; encrypted-media"
+        <video
+          className="pointer-events-none absolute top-1/2 left-1/2 h-full w-full min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-80"
+          autoPlay
+          muted
+          loop
+          playsInline
           aria-hidden="true"
-        />
+        >
+          <source src={withBasePath("/hero-video.webm")} type="video/webm" />
+          <source src={withBasePath("/hero-video.mp4")} type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/80" />
       </div>
 
