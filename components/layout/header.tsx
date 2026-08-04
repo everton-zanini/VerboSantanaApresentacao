@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { withBasePath } from "@/lib/base-path";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site-config";
 
@@ -28,10 +30,17 @@ export function Header() {
         <a
           href="#hero"
           className={cn(
-            "font-heading text-lg font-bold tracking-tight transition-colors",
+            "flex items-center gap-2 font-heading text-lg font-bold tracking-tight transition-colors",
             scrolled ? "text-foreground" : "text-white",
           )}
         >
+          <Image
+            src={withBasePath("/Igreja-Verbo-da-Vida-e1691084772346.webp")}
+            alt=""
+            width={28}
+            height={28}
+            className="h-7 w-7 rounded-full object-cover"
+          />
           {siteConfig.shortName}
         </a>
         <Button
