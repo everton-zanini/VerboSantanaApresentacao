@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { BackToTopButton } from "@/components/layout/back-to-top-button";
-import { withBasePath } from "@/lib/base-path";
 import { siteConfig } from "@/lib/site-config";
 
 const inter = Inter({
@@ -27,9 +26,6 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
-  icons: {
-    icon: withBasePath("/Igreja-Verbo-da-Vida-e1691084772346.webp"),
-  },
   keywords: [
     "igreja",
     "igreja evangélica",

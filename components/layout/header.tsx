@@ -39,7 +39,7 @@ export function Header() {
             alt=""
             width={28}
             height={28}
-            className="h-7 w-7 rounded-full object-cover"
+            className="h-7 w-7 object-contain"
           />
           {siteConfig.shortName}
         </a>
