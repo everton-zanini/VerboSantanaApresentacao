@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { withBasePath } from "@/lib/base-path";
 import { siteConfig } from "@/lib/site-config";
@@ -45,8 +46,15 @@ export function Hero() {
       >
         <motion.span
           variants={item}
-          className="mb-5 inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm font-medium backdrop-blur-sm"
+          className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm font-medium backdrop-blur-sm"
         >
+          <Image
+            src={withBasePath("/Igreja-Verbo-da-Vida-e1691084772346.webp")}
+            alt=""
+            width={20}
+            height={20}
+            className="h-5 w-5 rounded-full object-cover"
+          />
           {siteConfig.shortName}
         </motion.span>
         <motion.h1
